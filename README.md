@@ -37,3 +37,8 @@ Normal Coolant Temperature, High RPM, Low Intake Air Mass:
 Air Intake Restriction or Sensor Issue: The engine is running at high RPM but is not getting enough air, possibly due to a clogged air filter, malfunctioning sensors, or a faulty intake system.
 Low Coolant Temperature with Low RPM and Low Vehicle Speed:
 Thermostat or Engine Warm-Up Issue: The engine is not warming up properly, possibly due to a stuck open thermostat. This can lead to poor fuel economy and inefficient engine performance, especially at low speeds.
+
+
+High precision across most labels → The model is making accurate predictions when it does classify something.
+Lower recall for certain labels (e.g., Low Speed, Low Intake Air Mass, Airflow Restriction) → The model is missing some positive cases.
+samples avg is very high (0.93 F1-score) → The model is good at making correct predictions across multiple labels per sample.
