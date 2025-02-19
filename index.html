@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Anomaly Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🚗 Vehicle Anomaly Detection Simulator</h1>
+
+    <label>RPM: <span id="rpmValue">2000</span></label>
+    <input type="range" id="rpm" min="500" max="8000" value="2000" step="100" oninput="updateValue('rpm')">
+
+    <label>Coolant Temperature: <span id="coolantValue">90</span>°C</label>
+    <input type="range" id="coolant" min="50" max="130" value="90" step="1" oninput="updateValue('coolant')">
+
+    <label>Speed: <span id="speedValue">60</span> km/h</label>
+    <input type="range" id="speed" min="0" max="200" value="60" step="5" oninput="updateValue('speed')">
+
+    <label>Intake Air Mass: <span id="intakeValue">12</span> g/s</label>
+    <input type="range" id="intake" min="0" max="50" value="12" step="1" oninput="updateValue('intake')">
+
+    <button onclick="sendData()">🔍 Detect Anomalies</button>
+
+    <p id="result" class="hidden"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
