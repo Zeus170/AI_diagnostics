@@ -5,25 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Anomaly Detection</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>🚗 Vehicle Anomaly Detection Simulator</h1>
 
-    <label>RPM: <span id="rpmValue">2000</span></label>
-    <input type="range" id="rpm" min="500" max="8000" value="2000" step="100" oninput="updateValue('rpm')">
+    <div class="container">
+        <h1>AI Vehicle Anomaly Detection Simulator</h1>
 
-    <label>Coolant Temperature: <span id="coolantValue">90</span>°C</label>
-    <input type="range" id="coolant" min="50" max="130" value="90" step="1" oninput="updateValue('coolant')">
+        <div class="slider-container">
+            <label>RPM: <span id="rpmValue">1000</span></label>
+            <input type="range" id="rpm" min="500" max="8000" value="2000" step="100" oninput="updateValue('rpm')">
+        </div>
 
-    <label>Speed: <span id="speedValue">60</span> km/h</label>
-    <input type="range" id="speed" min="0" max="200" value="60" step="5" oninput="updateValue('speed')">
+        <div class="slider-container">
+            <label>Coolant Temperature: <span id="coolantValue">90</span>°C</label>
+            <input type="range" id="coolant" min="50" max="130" value="90" step="1" oninput="updateValue('coolant')">
+        </div>
 
-    <label>Intake Air Mass: <span id="intakeValue">12</span> g/s</label>
-    <input type="range" id="intake" min="0" max="50" value="12" step="1" oninput="updateValue('intake')">
+        <div class="slider-container">
+            <label>Speed: <span id="speedValue">60</span> km/h</label>
+            <input type="range" id="speed" min="0" max="200" value="60" step="5" oninput="updateValue('speed')">
+        </div>
 
-    <button onclick="sendData()">🔍 Detect Anomalies</button>
+        <div class="slider-container">
+            <label>Intake Air Mass: <span id="intakeValue">12</span> g/s</label>
+            <input type="range" id="intake" min="0" max="50" value="12" step="1" oninput="updateValue('intake')">
+        </div>
 
-    <p id="result" class="hidden"></p>
+    
+
+        <p id="result" class="hidden"></p>
+
+        <h3>Diagnosis:</h3>
+        <p id="diagnosis" class="hidden"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>
